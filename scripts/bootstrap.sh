@@ -140,6 +140,7 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Enable remote login
 sudo systemsetup -setremotelogin on
 
+# Add contact info to lock screen
 telephone='+44 7715 403231'
 email='fernando.garcia.17@ucl.ac.uk'
 sudo -S defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Email: ${email}\nTel: ${telephone}"
