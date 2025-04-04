@@ -1,7 +1,7 @@
-# Fernando's dotfiles
+# Felix's dotfiles
 
 Set up with
 
 ```shell
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply FeliMe
 ```
