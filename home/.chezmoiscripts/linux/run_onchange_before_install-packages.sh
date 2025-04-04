@@ -2,7 +2,7 @@
 
 set -eufo pipefail
 
-sudo apt-get install -y \
+sudo apt-get update && sudo apt-get install -y \
     nvtop \
     tree \
     unzip
