@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = Fernando Pérez-García
-	email = fepegar@gmail.com
+	name = Felix Meissen
+	email = felix.meissen@gmail.com
 [init]
 	defaultBranch = main

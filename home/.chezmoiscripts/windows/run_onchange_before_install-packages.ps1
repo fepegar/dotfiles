@@ -7,11 +7,7 @@ $apps = @(
     "GIMP.GIMP",
     "GitHub.GitHubDesktop",
     "Microsoft.Azure.StorageExplorer",
-    "Microsoft.VisualStudioCode",
-    "Spotify.Spotify",
-    "Starship.Starship",
-    "VideoLAN.VLC",
-    "Zoom.Zoom"
+    "Microsoft.VisualStudioCode"
 )
 
 foreach ($app in $apps) {
