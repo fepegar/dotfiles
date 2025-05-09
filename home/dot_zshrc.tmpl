@@ -17,6 +17,9 @@ eval "$(mise activate zsh)"
 # starship
 eval "$(starship init zsh)"
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # https://docs.github.com/en/copilot/managing-copilot/configure-personal-settings/configuring-github-copilot-in-the-cli#zsh
 # If "gh copilot" fails echo a warning
 if ! gh copilot --version > /dev/null; then
