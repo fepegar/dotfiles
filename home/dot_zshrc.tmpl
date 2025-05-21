@@ -132,10 +132,16 @@ alias op="xdg-open"
 {{ end }}
 
 
-cg () {
+function cg() {
   cd ~/git/"$1"
 }
 
-ghf() {
-  git clone git@github.com:fepegar/"$1".git
+function ghf() {
+  git clone git@github.com:fepegar/"$1".git && cd "$1"
 }
+
+function takeuv() {
+  uv init $@ && cd ${@:$#} && uv sync
+}
+
+alias tuv="takeuv"
