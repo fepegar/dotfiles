@@ -26,3 +26,7 @@ zoxide = "latest"
 AZCOPY_AUTO_LOGIN_TYPE = "AZCLI"
 AZURE_CORE_COLLECT_TELEMETRY = 0
 JUPYTER_PLATFORM_DIRS = 1
+
+[settings]
+# https://github.com/jdx/mise/discussions/4345
+idiomatic_version_file_enable_tools = []
