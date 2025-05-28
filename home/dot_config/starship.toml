@@ -1,12 +1,80 @@
+palette = 'uv'
+
+[palettes.uv]
+honeysuckle = '#dffe7c'
+lavender = '#cf67e2'
+
 [azure]
 disabled = true
 
 [directory]
 truncate_to_repo = false
 
-[python]
-python_binary = ".venv/bin/python"
-
 [status]
 disabled = false
 format = '[$status]($style) '
+
+[python]
+python_binary = ".venv/bin/python"
+symbol = " "
+
+[custom.uv-version]
+description = "The currently installed version of uv"
+shell = "bash"
+detect_files = [
+  ".python-version",
+  "Pipfile",
+  "__init__.py",
+  "pylock.toml",
+  "pyproject.toml",
+  "requirements.txt",
+  "setup.py",
+  "tox.ini",
+  "uv.lock",
+]
+style = "bold honeysuckle"
+symbol = "by"
+command = """
+if ! command -v uv >/dev/null; then
+  exit 1
+fi
+
+uv_version=$(uv --version | awk '{print $2}')
+
+emoji=⚡️
+printf "%s v%s" "$emoji" "$uv_version"
+"""
+format = "$symbol [($output )]($style)"
+
+[custom.uv-lock]
+description = "Symbol representing the state of the lock file"
+shell = "bash"
+style = "bold lavender"
+detect_files = [
+  ".python-version",
+  "Pipfile",
+  "__init__.py",
+  "pylock.toml",
+  "pyproject.toml",
+  "requirements.txt",
+  "setup.py",
+  "tox.ini",
+  "uv.lock",
+]
+command = """
+if ! command -v uv >/dev/null; then
+  exit 1
+fi
+
+suffix=""
+if uv lock --check-exists >/dev/null; test $? -eq 2; then
+  suffix="?"
+elif uv lock --check >/dev/null; test $? -eq 2; then
+  suffix="!"
+fi
+
+if [ -n "$suffix" ]; then
+  printf ["$suffix"]
+fi
+"""
+format = "[($output )]($style)"
