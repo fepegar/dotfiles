@@ -5,3 +5,8 @@
 	email = fepegar@gmail.com
 [init]
 	defaultBranch = main
+# Adapted from Anton's https://github.com/ant0nsc/dotfiles/commit/0636107d34d9a89642c486aaae7ad1cda49469f9
+[credential]
+	helper = /usr/local/bin/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
