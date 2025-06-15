@@ -20,6 +20,7 @@ symbol = " "
 
 [custom.uv-version]
 description = "The currently installed version of uv"
+ignore_timeout = true
 shell = "bash"
 detect_files = [
   ".python-version",
