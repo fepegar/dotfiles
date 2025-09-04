@@ -18,6 +18,9 @@ format = '[$status]($style) '
 python_binary = ".venv/bin/python"
 symbol = " "
 
+[time]
+disabled = false
+
 [custom.uv-version]
 description = "The currently installed version of uv"
 ignore_timeout = true
