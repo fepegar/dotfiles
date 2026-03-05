@@ -1,0 +1,7 @@
+- Use mise-en-place for tasks and tools management
+- Use uv for everything related to Python
+- Use Zensical for documentation
+- Use ty for type checking
+- Use ruff for formatting
+- When building a workflow for documentation, use Smokeshow for ephemeral deployments, adding a comment in the PR with the deployment URL
+- If coding in Python, use the oldest supported version (https://devguide.python.org/versions/#supported-versions)
