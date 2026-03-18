@@ -10,6 +10,6 @@ fi
 if sudo chsh -s /bin/zsh $USER; then
   echo "Default shell changed to zsh successfully."
 else
-  echo "Failed to change default shell. Adding fallback to ~/.bash_profile."
-  echo 'exec zsh' >> ~/.bash_profile
+  echo "Failed to change default shell. Adding \"exec zsh\" fallback to ~/.bashrc."
+  echo 'exec zsh' >> ~/.bashrc
 fi
