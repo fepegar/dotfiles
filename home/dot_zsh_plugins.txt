@@ -14,3 +14,5 @@ MichaelAquilina/zsh-you-should-use
 zdharma-continuum/fast-syntax-highlighting kind:defer
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-history-substring-search
+
+atuinsh/atuin
