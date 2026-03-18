@@ -1,7 +1,17 @@
-- Use mise-en-place for tasks and tools management
-- Use uv for everything related to Python
-- Use Zensical for documentation
+- Use mise-en-place to add tasks (e.g. run prek hooks, serve docs, run linting), environment variables (e.g. default values for CLI options) and tools pinning (e.g. prek or uv).
+- Use uv for everything related to Python. "uv add" for dependencies, "uv run" to run things, "uvx" to run tools that are not installed locally, "uv tree" to understand dependencies, etc.
+- Use Zensical for documentation. Zensical docs are at https://zensical.org/docs/get-started/
 - Use ty for type checking
 - Use ruff for formatting
+- Use pytest-sugar for unit tests
+- Use Typst if you need to write scientific reports or slides
 - When building a workflow for documentation, use Smokeshow for ephemeral deployments, adding a comment in the PR with the deployment URL
 - If coding in Python, use the oldest supported version (https://devguide.python.org/versions/#supported-versions)
+- Use loguru for logging, Typer for CLI tools, rich for nice formatting
+- Always ask for confirmation before deleting files/folders
+- Use prek for pre-commit hooks
+- Finish all files with a new line
+- Document all you've done in a markdown file in the current folder (copilot_log.md). Particularly important are things that failed, and gotchas.
+- Use Google style for docstrings.
+- Don't hard-code things in the docs that will need maintenance, e.g., "there are 25 transforms available".
+- When possible, use test-driven development. Write first the test, then the implementation.
