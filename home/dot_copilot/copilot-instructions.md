@@ -15,3 +15,4 @@
 - Use Google style for docstrings.
 - Don't hard-code things in the docs that will need maintenance, e.g., "there are 25 transforms available".
 - When possible, use test-driven development. Write first the test, then the implementation.
+- When writing documentation, follow the philosophy of https://diataxis.fr/.
