@@ -19,3 +19,5 @@
 - Avoid reshape, view, unsqueeze, squeeze, transpose, etc. in favor of einops.
 - Add Google-style docstrings to all new classes, methods and functions.
 - Do not add yourself as contributor to Git commits.
+- Do not run `rm` until I've given explicit permission.
+
