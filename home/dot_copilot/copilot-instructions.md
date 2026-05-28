@@ -20,4 +20,14 @@
 - Add Google-style docstrings to all new classes, methods and functions.
 - Do not add yourself as contributor to Git commits.
 - Do not run `rm` until I've given explicit permission.
+- Do not set a limit for line length.
+- Make sure the docstrings formatting uses mkdocstrings style, not Sphinx (e.g.
+  single vs double backticks, directives like :attr:), unless the current project uses Sphinx.
+- If the arguments of a function are in a different line when calling or
+  defining it, add a trailing comma after the last argument so that the
+  formatter splits (one line per argument) or just split yourself.
+- Use underscores for private methods, attributes, etc.
+- If a string is split into multiple lines, prefer spaces at the beginning of
+  a line instead of at the end. E.g., "This is the first line" " and this is
+  the second".
 
