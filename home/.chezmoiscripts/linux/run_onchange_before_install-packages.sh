@@ -5,7 +5,8 @@ set -eufo pipefail
 sudo apt-get install -y \
     nvtop \
     tree \
-    unzip
+    unzip \
+    zip
 
 # # Install and configure Git Credential Manager
 # # This is necessary for authentication to Azure DevOps
