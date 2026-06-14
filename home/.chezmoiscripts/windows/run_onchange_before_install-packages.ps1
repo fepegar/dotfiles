@@ -10,6 +10,7 @@ $apps = @(
     "Microsoft.Coreutils",
     "Microsoft.VisualStudioCode",
     "Mozilla.Firefox",
+    "RealVNC.VNCViewer",
     "Spotify.Spotify",
     "Starship.Starship",
     "VideoLAN.VLC",

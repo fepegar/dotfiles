@@ -11,7 +11,7 @@
 - Always ask for confirmation before deleting files/folders.
 - Use prek for pre-commit hooks.
 - Finish all files with a new line.
-- Document all you've done in a markdown file in the current folder (copilot_log.md). Particularly important are things that failed, and gotchas. Never stage that file with git.
+- Document all you've done in a markdown file in the current folder (copilot_log.md). Particularly important are things that failed, and gotchas. Never stage nor commit that file with git.
 - Use Google style for docstrings.
 - Don't hard-code things in the docs that will need maintenance, e.g., "there are 25 transforms available".
 - When possible, use test-driven development. Write first the test, then the implementation.
