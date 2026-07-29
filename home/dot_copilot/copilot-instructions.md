@@ -29,6 +29,7 @@
 - Always start function and method names with a verb, as well as their
   docstrings.
 - Add usage examples in docstrings of complex classes, functions and methods.
+- Don't mention default values of kwargs in docstrings.
 
 # Testing
 
