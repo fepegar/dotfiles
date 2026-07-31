@@ -7,6 +7,7 @@ $apps = @(
     "GIMP.GIMP",
     "GitHub.Copilot",
     "ITK-SNAP.ITK-SNAP",
+    "Kitware.Slicer",
     "Microsoft.Azure.StorageExplorer",
     "Microsoft.Coreutils",
     "Microsoft.VisualStudioCode",
