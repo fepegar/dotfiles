@@ -6,6 +6,7 @@ $apps = @(
     "Docker.DockerDesktop",
     "GIMP.GIMP",
     "GitHub.Copilot",
+    "ITK-SNAP.ITK-SNAP",
     "Microsoft.Azure.StorageExplorer",
     "Microsoft.Coreutils",
     "Microsoft.VisualStudioCode",
