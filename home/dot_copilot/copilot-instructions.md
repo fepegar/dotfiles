@@ -31,6 +31,8 @@
 - Add usage examples in docstrings of complex classes, functions and methods.
 - Don't mention default values of kwargs in docstrings.
 - Avoid double negatives. E.g., prefer `a = None if x is None else 1` over `a = 1 if x is not None else None`.
+- Readability is very important. Use descriptive variable names, functions with
+  low complexity, minimize computer-science jargon.
 
 # Testing
 
