@@ -7,6 +7,7 @@ $apps = @(
     "DigitalScholar.Zotero",
     "Docker.DockerDesktop",
     "GIMP.GIMP",
+    "GitHub.cli",
     "GitHub.Copilot",
     "ITK-SNAP.ITK-SNAP",
     "Kitware.Slicer",
