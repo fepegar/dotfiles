@@ -14,12 +14,14 @@ install_zsh() {
   fi
 }
 
+user_name="${USER:-$(id -un)}"
+
 if ! command -v zsh >/dev/null 2>&1; then
   install_zsh
 fi
 
 if [ "$(id -u)" -eq 0 ]; then
-  chsh -s /bin/zsh "$USER" || true
+  chsh -s /bin/zsh "$user_name" || true
 elif command -v sudo >/dev/null 2>&1; then
-  sudo chsh -s /bin/zsh "$USER" || true
+  sudo chsh -s /bin/zsh "$user_name" || true
 fi
