@@ -72,6 +72,11 @@ if [ -z "$code_command" ] || ! "$code_command" --version >/dev/null 2>&1; then
   code_command="$local_bin/code"
 fi
 
+if ! "$code_command" --list-extensions >/dev/null 2>&1; then
+  echo "VS Code CLI does not support extension management; skipping extension installation."
+  exit 0
+fi
+
 {{- range $extensions }}
 "$code_command" --force --install-extension {{ . }}
 {{- end }}
