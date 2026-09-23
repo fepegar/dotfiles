@@ -1,6 +1,14 @@
-#! /bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-if ! command -v atuin 2>&1 >/dev/null
-then
-  curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+if command -v atuin >/dev/null 2>&1; then
+  exit 0
 fi
+
+if ! command -v mise >/dev/null 2>&1; then
+  echo "Atuin requires mise, but mise is not installed." >&2
+  exit 1
+fi
+
+mise use --global atuin@latest
+mise install
