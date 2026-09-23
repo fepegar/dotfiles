@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if command -v atuin >/dev/null 2>&1; then
+if command -v atuin >/dev/null 2>&1 &&
+  atuin --version >/dev/null 2>&1; then
   exit 0
 fi
 

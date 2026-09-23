@@ -8,8 +8,12 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 {{ end }}
 
 # atuin
-. "$HOME/.atuin/bin/env"
-eval "$(atuin init zsh)"
+if [ -f "$HOME/.atuin/bin/env" ]; then
+  . "$HOME/.atuin/bin/env"
+fi
+if command -v atuin >/dev/null 2>&1 && atuin --version >/dev/null 2>&1; then
+  eval "$(atuin init zsh)"
+fi
 
 # mise-en-place
 eval "$(mise activate zsh)"
