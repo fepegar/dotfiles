@@ -2,6 +2,8 @@ wsl --install
 
 $apps = @(
     "7zip.7zip",
+    "Anthropic.Claude",
+    "Coder.CoderDesktop",
     "DigitalScholar.Zotero",
     "Docker.DockerDesktop",
     "GIMP.GIMP",
@@ -13,8 +15,10 @@ $apps = @(
     "Microsoft.VisualStudioCode",
     "Mozilla.Firefox",
     "RealVNC.VNCViewer",
+    "SlackTechnologies.Slack",
     "Spotify.Spotify",
     "Starship.Starship",
+    "Tailscale.Tailscale",
     "VideoLAN.VLC",
     "Zoom.Zoom"
 )
