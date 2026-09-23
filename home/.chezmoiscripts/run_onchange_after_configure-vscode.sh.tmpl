@@ -47,12 +47,31 @@ set -euo pipefail
 
 code_command="$(command -v code || command -v code-insiders || true)"
 if [ -z "$code_command" ] || ! "$code_command" --version >/dev/null 2>&1; then
-  echo "VS Code CLI not found; skipping extension installation."
-  exit 0
+  local_bin="$HOME/.local/bin"
+  case "$(uname -m)" in
+    x86_64) code_arch="x64" ;;
+    aarch64|arm64) code_arch="arm64" ;;
+    *)
+      echo "Unsupported architecture for VS Code CLI: $(uname -m)" >&2
+      exit 1
+      ;;
+  esac
+
+  echo "Installing VS Code CLI..."
+  mkdir -p "$local_bin"
+  archive="$(mktemp)"
+  trap 'rm -f "$archive"' EXIT
+  curl --fail --show-error --silent --location \
+    --connect-timeout 30 --max-time 300 \
+    --retry 5 --retry-all-errors --retry-delay 3 \
+    "https://update.code.visualstudio.com/latest/cli-linux-${code_arch}/stable" \
+    --output "$archive"
+  tar -xzf "$archive" -C "$local_bin"
+  chmod +x "$local_bin/code"
+  export PATH="$local_bin:$PATH"
+  code_command="$local_bin/code"
 fi
 
-if [ -n "$code_command" ]; then
-  {{- range $extensions }}
-  "$code_command" --force --install-extension {{ . }}
-  {{- end }}
-fi
+{{- range $extensions }}
+"$code_command" --force --install-extension {{ . }}
+{{- end }}
