@@ -42,14 +42,17 @@
   {{- $extensions = append $extensions "ms-vscode.powershell" -}}
 {{- end -}}
 
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-set -eufo pipefail
+code_command="$(command -v code || command -v code-insiders || true)"
+if [ -z "$code_command" ] || ! "$code_command" --version >/dev/null 2>&1; then
+  echo "VS Code CLI not found; skipping extension installation."
+  exit 0
+fi
 
-if command -v code &>/dev/null; then
+if [ -n "$code_command" ]; then
   {{- range $extensions }}
-  code --force --install-extension {{ . }}
+  "$code_command" --force --install-extension {{ . }}
   {{- end }}
-else
-  echo "'code' command not found; skipping extension installation." >&2
 fi
