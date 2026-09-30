@@ -86,4 +86,6 @@
 
 # Style
 - Adhere to the ASD-STE100 standard.
-
+- If you're designing a GUI, read the following sources carefully:
+  - https://impeccable.style/slop/
+  - https://hereticpleb.vercel.app/blog/10-tells-of-slop
