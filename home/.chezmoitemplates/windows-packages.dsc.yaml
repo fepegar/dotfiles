@@ -1,0 +1,132 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/PowerShell/DSC/main/schemas/2023/08/config/document.json
+$schema: https://raw.githubusercontent.com/PowerShell/DSC/main/schemas/2023/08/config/document.json
+metadata:
+  winget:
+    processor: dscv3
+resources:
+  - name: SevenZip
+    type: Microsoft.WinGet/Package
+    properties:
+      id: 7zip.7zip
+      source: winget
+      acceptAgreements: true
+  - name: Claude
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Anthropic.Claude
+      source: winget
+      acceptAgreements: true
+  - name: CoderDesktop
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Coder.CoderDesktop
+      source: winget
+      acceptAgreements: true
+  - name: Zotero
+    type: Microsoft.WinGet/Package
+    properties:
+      id: DigitalScholar.Zotero
+      source: winget
+      acceptAgreements: true
+  - name: DockerDesktop
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Docker.DockerDesktop
+      source: winget
+      acceptAgreements: true
+  - name: GIMP
+    type: Microsoft.WinGet/Package
+    properties:
+      id: GIMP.GIMP
+      source: winget
+      acceptAgreements: true
+  - name: GitHubCLI
+    type: Microsoft.WinGet/Package
+    properties:
+      id: GitHub.cli
+      source: winget
+      acceptAgreements: true
+  - name: GitHubCopilot
+    type: Microsoft.WinGet/Package
+    properties:
+      id: GitHub.Copilot
+      source: winget
+      acceptAgreements: true
+  - name: ITKSNAP
+    type: Microsoft.WinGet/Package
+    properties:
+      id: ITK-SNAP.ITK-SNAP
+      source: winget
+      acceptAgreements: true
+  - name: Slicer
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Kitware.Slicer
+      source: winget
+      acceptAgreements: true
+  - name: StorageExplorer
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Microsoft.Azure.StorageExplorer
+      source: winget
+      acceptAgreements: true
+  - name: Coreutils
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Microsoft.Coreutils
+      source: winget
+      acceptAgreements: true
+  - name: VSCode
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Microsoft.VisualStudioCode
+      source: winget
+      acceptAgreements: true
+  - name: Firefox
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Mozilla.Firefox
+      source: winget
+      acceptAgreements: true
+  - name: VNCViewer
+    type: Microsoft.WinGet/Package
+    properties:
+      id: RealVNC.VNCViewer
+      source: winget
+      acceptAgreements: true
+  - name: Slack
+    type: Microsoft.WinGet/Package
+    properties:
+      id: SlackTechnologies.Slack
+      source: winget
+      acceptAgreements: true
+  - name: Spotify
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Spotify.Spotify
+      source: winget
+      acceptAgreements: true
+  - name: Starship
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Starship.Starship
+      source: winget
+      acceptAgreements: true
+  - name: Tailscale
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Tailscale.Tailscale
+      source: winget
+      acceptAgreements: true
+  - name: VLC
+    type: Microsoft.WinGet/Package
+    properties:
+      id: VideoLAN.VLC
+      source: winget
+      acceptAgreements: true
+  - name: Zoom
+    type: Microsoft.WinGet/Package
+    properties:
+      id: Zoom.Zoom
+      source: winget
+      acceptAgreements: true

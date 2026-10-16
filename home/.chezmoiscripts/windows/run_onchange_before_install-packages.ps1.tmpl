@@ -1,0 +1,21 @@
+$ErrorActionPreference = 'Stop'
+
+if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+    throw 'WinGet is required. Complete the Windows setup in README.md first.'
+}
+
+$configuration = @'
+{{ includeTemplate "windows-packages.dsc.yaml" . }}
+'@
+
+$configurationFile = New-TemporaryFile
+try {
+    Set-Content -LiteralPath $configurationFile.FullName -Value $configuration -Encoding utf8
+    winget configure --file $configurationFile.FullName --accept-configuration-agreements
+    if ($LASTEXITCODE -ne 0) {
+        throw "WinGet configuration failed with exit code $LASTEXITCODE. See README.md for Windows prerequisites."
+    }
+}
+finally {
+    Remove-Item -LiteralPath $configurationFile.FullName -Force
+}
