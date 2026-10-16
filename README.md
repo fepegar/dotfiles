@@ -51,7 +51,8 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply fepegar
 3. Open Ubuntu once to create your Linux user, then run the Linux setup above
    inside WSL to configure the Linux shell and tools.
 
-Keep App Installer (WinGet) up to date; the package hook needs DSC v3 support.
+Keep App Installer (WinGet) up to date; the package hook needs WinGet 1.11 or newer
+with DSC v3 configuration support enabled.
 If `winget configure` is unavailable, follow the upstream
 [troubleshooting guide](https://github.com/microsoft/WindowsDeveloperConfig#-troubleshooting)
 (including `winget configure --enable` where needed).
